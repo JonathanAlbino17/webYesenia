@@ -1,0 +1,510 @@
+/*fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Condensed&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Condensed&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*variables de color*/
+:root{
+    --bg-body: #835656;
+    --primary-color: #000000;
+    --fontSize-title: 40px;
+    --fontSize-parrafos: 20px;
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+}
+h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+p,a,li,input,label,td{
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    background: var(--bg-body);
+}
+
+/*header section*/
+header{
+    padding-top: 80px;
+}
+header .col-md-6{
+    padding: 0 125px;
+    text-align: left;
+}
+header .logo{
+    position: relative;
+    text-align: left;
+    padding-bottom: 20px;
+}
+header .col-md-6 ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: right;
+    position: relative;
+    bottom: -20px;
+}
+header .col-md-6 ul li a{
+    display: block;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 30px;
+    background: transparent;
+    text-align: right;
+    text-align: center;
+    transition: .2s;
+    border-radius: 8px;
+}
+header .col-md-6 ul:hover a{
+    filter: blur(2px);
+}
+header .col-md-6 ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    filter: none;
+}
+header .col-md-6 ul li a.twitter:hover{
+    background: rgb(88, 150, 241);
+}
+header .col-md-6 ul li a.facebook:hover{
+    background: rgb(43, 12, 155);
+}
+header .col-md-6 ul li a.instagram:hover{
+    background: rgb(211, 54, 140);
+}
+header .col-md-6 ul li a.spotify:hover{
+    background: rgb(10, 167, 44);
+}
+
+/*barra de navegacion*/
+nav.bg-yesenia{
+    background: var(--primary-color);
+}
+
+nav.bg-yesenia ul{
+    margin: 0 auto;
+}
+nav.bg-yesenia ul li{
+    margin-top: 8px;
+    padding: 0 20px;
+}
+nav.bg-yesenia ul li a{
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+nav.bg-yesenia ul li a.nav-link.active{
+    color: white;
+}
+nav.bg-yesenia ul li a.nav-link.active:hover{
+    color: var(--bg-body);
+}
+nav.bg-yesenia ul li a::after{
+    width: 0;
+    height: 2px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    transition: .4s;
+}
+nav.bg-yesenia ul li a:hover{
+    color: var(--bg-body);
+    transform: translateY(-2px) scale(1.15);
+}
+nav.bg-yesenia ul li a:hover::after{
+    background: var(--bg-body);
+    width: 82%;
+}
+
+/*estilos hero*/
+#hero{
+    padding: 130px 0;
+}
+#hero .cont-foto{
+    position: relative;
+    width: 400px;
+}
+
+#hero .cont-foto img{
+    z-index: 2;
+    border-radius: 15px;
+    position: relative;
+    width: 400px;
+    box-shadow: 5px 15px 30px 5px black;
+}
+#hero .cont-foto::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    background: #614141;
+    z-index: 1;
+    filter: blur(8px);
+}
+#hero .cont-info{
+    padding-left: 50px;
+}
+#hero .cont-info h1{
+    color: rgb(177, 99, 89);
+    font-size: 70px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+#hero .cont-info p{
+    color: #363131;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+/*estilos biografia*/
+#biografia{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-right: 60px;
+}
+#biografia .info-biografia{
+    background: rgb(201, 199, 199);
+    border-radius: 25px;
+    box-shadow: 5px 15px 30px 5px black;
+}
+#biografia .info-biografia h2{
+    color: black;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 45px;
+}
+#biografia .info-biografia p{
+    color: black;
+    font-size: 22px;
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+#biografia .foto-biografia{
+    padding-left: 70px;
+    z-index: 1;
+    position: relative;
+}
+#biografia .foto-biografia img{
+    width: 500px;
+    box-shadow: 5px 15px 30px 5px black
+}
+#biografia .foto-biografia div img{
+    width: 335px;
+    border-radius: 15px;
+}
+#biografia .foto-biografia div{
+    position: absolute;
+    z-index: 9;
+    bottom: 125px;
+    left: 28px;
+}
+
+#lanzamientos{
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+#lanzamientos .container{
+    background: #583939;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 5px 15px 30px 5px black
+}
+#lanzamientos h2{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 35px;
+}
+
+footer{
+    display: block;
+    padding-top: 60px;
+}
+#footer{
+    background: var(--primary-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#footer .redes-footer h2{
+    color: var(--bg-body);
+    font-size: 30px;
+    padding-left: 85px;
+    padding-bottom: 10px    ;
+}
+#footer .redes-footer ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 5px;
+}
+#footer .redes-footer ul li a{
+    display: block;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 30px;
+    background: var(--bg-body);
+    text-align: right;
+    text-align: center;
+    transition: .2s;
+    border-radius: 8px;
+}
+
+#footer .redes-footer ul li a:hover{
+    transform: translateY(-3px) scale(1.10);
+}
+#footer .redes-footer ul li a.twitter:hover{
+    background: rgb(108, 160, 238);
+}
+#footer .redes-footer ul li a.facebook:hover{
+    background: rgb(58, 16, 209);
+}
+#footer .redes-footer ul li a.instagram:hover{
+    background: rgb(211, 54, 140);
+}
+#footer .redes-footer ul li a.spotify:hover{
+    background: rgb(10, 167, 44);
+}
+
+#footer .copyright p{
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    padding-top: 45px;
+}
+
+#contacto{
+    padding: 60px 0;
+}
+#contacto .foto-contacto img{
+    border-radius: 20px;
+    box-shadow: 5px 15px 30px 5px black
+}
+#contacto .info-contacto{
+    background: #363131;
+    border-radius: 25px;
+    box-shadow: 5px 15px 30px 5px black
+}
+#contacto .info-contacto h2{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+#contacto .info-contacto h3{
+    font-size: 32px;
+    text-align: right;
+    color: rgb(226, 225, 225);
+    padding-top: 35px;
+}
+#contacto .info-contacto p{
+    text-align: right;
+    color: azure;
+    padding-top: 20px;
+}
+
+#noticias{
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+#noticias .fotoNoticias img{
+    border-radius: 20px;
+    height: 320px;
+}
+#galeria .container{
+    background: #614141;
+    border-radius: 25px;
+    box-shadow: 5px 15px 30px 5px black
+}
+#galeria .container h2{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+#galeria .foto-galeria{
+    padding: 50px 0;
+    padding-left: 15px;
+}
+#galeria .foto-galeria img{
+    border-radius: 10px;
+    height: 350px;
+    box-shadow: 5px 15px 30px 5px black
+}
+/*noticias*/
+.slick-arrow{
+    width: 30px;
+    height: 30px;
+    font-size: 1px;
+    color: transparent;
+    position: absolute;
+    top: -45px;
+    right: 0;
+    border: 0px;
+    border-radius: 5px;
+}
+.slick-prev{
+    right: 40px;
+    background: #3d3f46 url("../MEDIA/flecha-correcta.png");
+    background-size: 100%;
+    transform: rotate(-180deg);
+}
+.slick-next{
+    background: #3d3f46 url("../MEDIA/flecha-correcta.png");
+    background-size: 100%;
+}
+
+/*RESPONSIVE TABLET*/
+
+@media screen and (min-width:701px) and (max-width:990px){
+    header .col-md-6 {
+        padding: -1px;
+        text-align: right;
+    }
+    header .col-md-6 {
+        padding: 0 35px;
+        text-align: left;
+    }
+    nav.bg-yesenia ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #hero .cont-foto {
+        position: relative;
+        width: 400px;
+        padding-left: 142px;
+    }
+    #hero .cont-foto::before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 168px;
+        background: #614141;
+        z-index: 1;
+        filter: blur(8px);
+    }
+    #hero .cont-info {
+        padding-left: 50px;
+        padding-top: 60px;
+    }
+    #biografia .foto-biografia img {
+        width: 550px;
+        padding-top: 50px;
+        box-shadow: none;
+    }
+    #biografia .foto-biografia div {
+        position: absolute;
+        z-index: 9;
+        bottom: -90px;
+        left: 28px;
+    }
+    #contacto .row{
+        display: block;
+    }
+    #contacto .container{
+        width: 75%;
+    }
+    #contacto .foto-contacto{
+        width: 100%;
+    }
+    #contacto .foto-contacto img {
+        border-radius: 20px;
+        box-shadow: none;
+        padding-left: 130px;
+        padding-bottom: 50px;
+    }
+    #contacto .info-contacto {
+        background: #363131;
+        border-radius: 25px;
+        box-shadow: 5px 15px 30px 5px black;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    #galeria .foto-galeria {
+        width: 50%;
+    }
+    #galeria .foto-galeria img {
+        height: 320px;
+    }
+}
+
+
+/*RESPONSIVE SMARTPHONE*/
+
+@media screen and (min-width:320px) and (max-width:700px){
+    #galeria .foto-galeria {
+        width: 100%;
+        text-align: center;
+    }
+    header .col-md-6 {
+        padding: 0 37px;
+        text-align: center;
+    }
+    header .logo {
+        text-align: center;
+    }
+    #contacto .foto-contacto{
+        padding-bottom: 50px;
+    }
+    #contacto .foto-contacto img {
+        height: 350px;
+    }
+    #hero .cont-foto::before {
+        width: 80%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 3px;
+        background: #614141;
+        z-index: 1;
+        filter: blur(8px);
+    }
+    #hero .cont-foto img {
+        width: 350px;
+    }
+    #hero .cont-info p {
+        font-size: 37px;
+    }
+    #hero .cont-info h1 {
+        margin-top: 60px;
+    }
+    #biografia .row{
+        padding-left: 20px;
+    }
+    #biografia .info-biografia p {
+        font-size: 15px;
+    }
+    #biografia .foto-biografia img {
+        width: 100%;
+        padding-top: 50px;
+    }
+    #biografia .foto-biografia div {
+        position: static;
+    }
+    #biografia .foto-biografia div img {
+        width: 100%;
+        border-radius: 15px;
+    }
+    #footer .copyright p {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 40px;
+    }
+    #footer .redes-footer{
+        padding-bottom: 20px;
+    }
+}
